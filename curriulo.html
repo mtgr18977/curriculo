@@ -1,0 +1,670 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>CV</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="6eafc66c-c9cd-4b89-a75a-1f921fd5cf57" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/gradients_3.png" style="object-position:center 60%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="CV%206eafc66cc9cd4b89a75a1f921fd5cf57/81808413_173996653702907_5128301016707018941_n.jpg"/></div><h1 class="page-title">CV</h1></header><div class="page-body"><ul id="54bf31c2-a395-4432-9f4f-972cfed3decd" class="bulleted-list"><li style="list-style-type:disc"><strong>Experience</strong>: +10 years of experience as linguistics consultant for UX fields. 10 years of experience with web development with emphases on back end PHP development and natural language processing.</li></ul><ul id="74e82679-ea29-4168-886f-36d213de4be8" class="bulleted-list"><li style="list-style-type:disc"><strong>Responsibilities </strong>: Involved in all phases of web development, such as UML modeling, requisites gathering, MySQL databases creation, front and back end development and interfaces translation and review.</li></ul><ul id="ece498f2-ac0e-45ec-8354-8a0b9435fd0e" class="bulleted-list"><li style="list-style-type:disc"><strong>Testing</strong>: Experience in testing methodologies like integration, regression, system, user acceptance testing (UAT) and interface testing.</li></ul><ul id="f48884e5-a00d-4677-a429-2a917666bd3c" class="bulleted-list"><li style="list-style-type:disc"><strong>Gaming development experience</strong>: Experience with game development using Unity3D for Windows and mobile.</li></ul><ul id="97e1e08d-443a-488b-83de-e16001c39206" class="bulleted-list"><li style="list-style-type:disc"><strong>Languages</strong>: English: Fluent; Spanish: only for reading and listening; French: only for reading.</li></ul><ul id="573cb898-6e75-4113-b80a-d9a2b0956c6e" class="bulleted-list"><li style="list-style-type:disc"><strong>Other information</strong>: Approximately 4 years of experience with teaching Mathematics, English and Programming. 2 years as assistant teacher for the introductory courses of programming @ Instituto de Informática from UFRGS.</li></ul><ul id="2b302017-c3c7-4f8c-8ae9-a41512fd1a2b" class="bulleted-list"><li style="list-style-type:disc">Link for my <strong>Behance portfólio </strong>with translations:</li></ul><figure id="a10d7b27-4f35-4157-9025-1d1724444851"><a href="https://www.behance.net/pauloduarte12" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Paulo Duarte on Behance</div><div class="bookmark-description">Paulo Duarte on Behance</div></div><div class="bookmark-href"><img src="https://a5.behance.net/65b43a0c17d62efbdd2f84db6a3eabc09b5a5d4e/img/site/favicon.ico?cb=264615658" class="icon bookmark-icon"/>https://www.behance.net/pauloduarte12</div></div><img src="https://mir-s3-cdn-cf.behance.net/user/276/b562c878852967.6308c0ac565a1.jpg" class="bookmark-image"/></a></figure><div id="8547e786-1960-4ccb-9213-88916a0454b6" class="column-list"><div id="df9c19f9-7312-464e-aa7e-fe089c54edf9" style="width:100%" class="column"></div></div><div id="f5b2bae9-5e88-49b2-9ca9-b1b7f189228c" class="column-list"><div id="044414aa-c207-41b9-9750-38f525283c6a" style="width:100%" class="column"></div></div><h1 id="4722fe77-7f4c-4ba0-8c72-6aa12c8c13ca" class="">☎️ Contact information</h1><p id="8f6b2d23-f6d3-48a2-8d41-a33a826b669a" class="">📧 paulogp@disroot.org</p><p id="93d1888d-ae3b-4b0f-a5df-18626a19620c" class="">📧 guilhermepilotti@gmail.com</p><p id="2dcd66db-261b-4ae0-9762-4080ff77662b" class="">📧 <a href="mailto:paulo@paulogpd.net">paulo@paulogpd.net</a></p><p id="b04eea5c-97ad-4cd9-bd1b-7c4f8123a15c" class="">🔗 <a href="https://www.linkedin.com/in/paulogpd/">https://www.linkedin.com/in/paulogpd/</a></p><p id="4ce4f5c5-2e87-403f-877d-d3ec30c64ef4" class="">🔗 <a href="https://github.com/mtgr18977">https://github.com/mtgr18977</a></p><p id="7c9c73a8-e812-4826-a671-30e87a7b66c6" class="">🔗 paulogpd.net</p><hr id="e69b6a5d-67dc-4658-bfb9-9c586d248a3c"/><h1 id="5416c4ac-a070-4640-baae-8902efa32eda" class=""><strong>👩🏻‍💻</strong> Work experience</h1><h2 id="570a8406-e01d-460c-bb7c-8c3707927dfc" class="">Technical Writer</h2><p id="0d5c30ba-f743-408a-a432-37f38ba4f552" class="block-color-gray">Azion<em>, Porto Alegre - Since July 2022</em></p><ul id="84ce0513-c1b7-47b1-bced-f55c6cfdba93" class="bulleted-list"><li style="list-style-type:disc"><strong>Project</strong>: I work as a technical writer for the marketplace and client growth teams, being responsible for reviewing, translating and localizing existing documentation, and creating new documentation for the company&#x27;s products. Done some API documentation - made by editing this documentation on Postman and Swagger.</li></ul><ul id="75abe924-0a94-44b4-a269-c66deae1de70" class="bulleted-list"><li style="list-style-type:disc"><strong>Realizations</strong>: I worked on the ideation of the new Style Guide for the technical writing team (and others teams and positions, such as dev writing, Customer Experience and some other teams of company that are adopting this Style Guide). I’m also providing feedback for the ideation and implementation of the Prose Linter <a href="http://vale.sh/">Vale.sh</a> as long as its integration with VSCode.</li></ul><ul id="b2ed5e18-1552-45c2-aff1-54cf5a00b3fb" class="bulleted-list"><li style="list-style-type:disc"><strong>Skills:</strong> VsCode · jira · slack · technical writing · API documentation · product documentation · Postman · Swagger.</li></ul><h2 id="6ac91fb1-1c93-4447-9166-975bc0507dda" class="">Linguistic and systems development consulting</h2><p id="126624a9-b56d-4440-bdae-12b2a1b2f16a" class="block-color-gray">Freelance<em>, Porto Alegre - Since August 2016</em></p><ul id="b1e189cd-24d9-4c33-83ce-2d075b3d78b2" class="bulleted-list"><li style="list-style-type:disc"><strong>Projects</strong>: I have been working since graduation with linguistic consulting, mainly in the fields of machine translation and interface development (localization, validation and technical writing) web and mobile using Python and PHP.</li></ul><ul id="15e86078-53ff-4289-9fca-056bace0ee9a" class="bulleted-list"><li style="list-style-type:disc"><strong>Skills:</strong> PhpMyAdmin · SDL Trados · memoQ · UX writing · Moodle · WordPress · Python · PHP</li></ul><h2 id="21231d77-9fd9-4578-b7ed-38c121eb3c9b" class="">Linguistic consulting, proofreader and technical writer</h2><p id="ee11b8ac-238a-4227-9f60-444d7666681c" class="block-color-gray">RoundTable Studios<em>, Porto Alegre - From December 2019 until December 2020</em></p><ul id="d7eb1fab-2dd4-49f5-9aff-b99aa805aa1a" class="bulleted-list"><li style="list-style-type:disc"><strong>Project</strong>: Miscellaneous projects, mainly with a focus on console games for Nintendo Switch and Xbox One S/X.</li></ul><ul id="497de433-fd49-48b6-b766-9fb2d62954eb" class="bulleted-list"><li style="list-style-type:disc"><strong>Main responsibilities</strong>: Testing games for bugs in interfaces (translations and/or localization), game experience (involving game design and texture analysis).</li></ul><ul id="1848e295-110a-4373-b7cf-841196beee60" class="bulleted-list"><li style="list-style-type:disc"><strong>Other activities</strong>: Localization of the interfaces, working within the localization team. Natural Language Processing for algorithms development for the special allocations and game matching systems and UX testing.</li></ul><ul id="65e20a51-4d37-4731-8fa7-5ecb0267dd1a" class="bulleted-list"><li style="list-style-type:disc"><strong>Skills:</strong> NLTK · SCIKIT-LEARN · applied linguistics · machine learning · translation</li></ul><h2 id="dcb1a1de-bde6-4227-9acf-703c50e4da12" class="">Linguistic consulting and technical translator</h2><p id="ff8ee2b7-0ed7-429f-b113-c9006c42fe36" class="block-color-gray">Lionbridge<em>, Porto Alegre - From November 2018 until December 2021</em></p><ul id="08c4f300-5177-4d0c-84af-49ab40c8b41e" class="bulleted-list"><li style="list-style-type:disc"><strong>Project</strong>: Miscellaneous projects regarding linguistics field with emphasis in interface testing and localization automation.</li></ul><ul id="e89241b2-bac4-4d22-b4d7-4c08672d7d17" class="bulleted-list"><li style="list-style-type:disc"><strong>Main responsibilities</strong>: Localization of mobile applications (iOS and Android), web development for integrated reports and presentations and translations of miscellaneous documents, mainly IT and engineering white papers.</li></ul><ul id="ff76272d-1e51-4372-9281-c050003d1949" class="bulleted-list"><li style="list-style-type:disc"><strong>Skills:</strong> applied linguistics · machine learning · translation</li></ul><h2 id="d522cb13-3226-48a9-9447-a0b65a6a30c5" class="">Technical translator, technical writer and linguistics consultant</h2><p id="2fe9f180-b8fb-4f60-8d40-74b02200707e" class="block-color-gray">Translation Back Office<em>, Porto Alegre - From December 2016 until December 2018</em></p><ul id="f4297de0-9034-4d4d-a5f4-9cf4a0d812c7" class="bulleted-list"><li style="list-style-type:disc"><strong>Project</strong>: Universidade Barça.</li></ul><ul id="ab22ae42-fe29-4305-acb5-99c60277076b" class="bulleted-list"><li style="list-style-type:disc"><strong>Main responsibilities</strong>: Localization for all the material of the project, including: Moodle interface, text books, videos, podcasts and presentations..</li></ul><ul id="1d729b75-1eab-4f3d-b329-bccb1abc2f6d" class="bulleted-list"><li style="list-style-type:disc"><strong>Skills:</strong> applied linguistics · translation · Trados · memoQ</li></ul><h2 id="0847672b-cf17-4659-bccf-4d56623a24d9" class="">Publisher and technical reviewer (Internship)</h2><p id="c9164df5-5717-4033-8d33-a9a49443a7e6" class="block-color-gray">PPG Antropologia/UFRGS - Estágio<em>, Porto Alegre - From February 2015 until July 2016</em></p><ul id="7f02b460-afce-4277-8699-e5fb5e66a6ba" class="bulleted-list"><li style="list-style-type:disc"><strong>Project</strong>: I worked on the migration of the journal publication system from the old (manual) platform to the OJS/SEER platform within the journal Horizontes Antropológicos. Also, I was the one responsible for the publishing flow for the journal - acceptance e rejecting letters, daily basis contact with authors and organizers for each number and the financial accounting (sales, trades, copies).</li></ul><ul id="ac819d47-95a6-4941-9e05-27860a423bcf" class="bulleted-list"><li style="list-style-type:disc"><strong>Main responsibilities</strong>: PHP development for the new platform. MySQL administration.</li></ul><ul id="fa1a0d53-b6b7-49f1-bf88-9a08372c07ae" class="bulleted-list"><li style="list-style-type:disc"><strong>Skills:</strong> Microsoft Office · Microsoft Excel · MySQL · OJS · WordPress · PHP</li></ul><h2 id="72ad604e-5c91-4d50-a94a-f94ea17ca8ed" class="">Technical writer and technical reviewer (Internship)</h2><p id="0838f3c4-9baa-410b-9f3b-01fd2e08695a" class="block-color-gray">Centro de Estudos Internacionais sobre Governo (CEGOV)/UFRGS - Estágio<em>, Porto Alegre - From November 2014 until January 2015</em></p><ul id="f4089674-51bf-4b23-820c-7907561bf7f8" class="bulleted-list"><li style="list-style-type:disc"><strong>Project</strong>: Budget allocation platform for Ministério da Defesa do Brasil.</li></ul><ul id="cd6831de-6f75-40e1-a082-e7a24e1eb211" class="bulleted-list"><li style="list-style-type:disc"><strong>Main responsibilities</strong>: Implementation of the web back and front end for the budget system for the project. Natural language processing for the AI system algorithms that were used to allocate the budget system.</li></ul><ul id="97d25284-624b-4449-ade4-faecc7498d89" class="bulleted-list"><li style="list-style-type:disc"><strong>Skills:</strong> JavaScript · NLTK · SCIKIT-LEARN · applied linguistics · machine learning</li></ul><h2 id="13527b76-9271-49aa-b685-229177ea94f8" class="">Researcher - Applied linguistics (FAPERGS)</h2><p id="6263b676-64fa-40b8-b553-45df50b28343" class="block-color-gray">TERMISUL/UFRGS - <em>Porto Alegre - From March 2012 until September 2014</em></p><ul id="fe92a6e5-cd78-4ba0-ac21-0ebe8e4cf73e" class="bulleted-list"><li style="list-style-type:disc"><strong>Project</strong>: LegisAMB - Environmental legislation processing and extraction.</li></ul><ul id="4c5da714-99f8-4650-b4bf-75e24ed236e8" class="bulleted-list"><li style="list-style-type:disc"><strong>Main responsibilities</strong>: Implementation of the web systems used to register the multiword expressions gathered at the project, testing the MWE Toolkit, attend to meetings with LiB at France to improve the algorithms of extraction and presentation of the project in national and international meetings.</li></ul><ul id="32b77b4c-fe66-4ea0-88fe-f14de1eedc57" class="bulleted-list"><li style="list-style-type:disc"><strong>Awards </strong>: Awarded ad the most prominent researcher at the year of 2012 at Salão de IC @ UFRGS.</li></ul><ul id="2d5a9024-c9ec-44e7-9b5b-d33012383142" class="bulleted-list"><li style="list-style-type:disc"><strong>Publications </strong>: Abstracts for the presentations: <em>”Combinatórias Léxicas Especializadas: etapas prévias para sua extração utilizando recursos do Processamento da Linguagem Natural”</em> in 2012 and <em>”Combinatórias Léxicas Especializadas: extração com o uso do MWE Toolkit”</em> in 2014 for the Salão de IC @ UFRGS. The presentation: ”Aplicação do MWE Toolkit na pesquisa de Combinatórias Léxicas Especializadas da linguagem legislativa do meio ambiente” for the 2013 <em>CAMELEON</em> Workshop @ UFRGS.</li></ul><ul id="7bebdbe5-f03d-4400-ab68-d894986ffee7" class="bulleted-list"><li style="list-style-type:disc"><strong>Skills:</strong> JavaScript · NLTK · SCIKIT-LEARN · applied linguistics · machine learning</li></ul><h2 id="7bd1d828-4eb2-4997-a2f4-aa34778f9a47" class="">PHP developer (Internship)</h2><p id="d28bd7c4-5d17-4fbd-b79b-37efc3a17dfc" class="block-color-gray">SEAD/UFRGS - <em>Porto Alegre - From October 2012 until May 2013</em></p><ul id="d5b9236a-6266-47e8-aa4c-23f5d7eaa71a" class="bulleted-list"><li style="list-style-type:disc"><strong>Project</strong>: Pedagogical Support Core.</li></ul><ul id="6fee93b0-9ae1-4765-a9ce-effec36f149f" class="bulleted-list"><li style="list-style-type:disc"><strong>Main responsibilities</strong>: I worked within the Pedagogical Support Core of UFRGS, supporting users for various platforms of EAD - AVA, Moodle, SAV. I also worked as a PHP programmer of modules and components of the Institutional Moodle that needed customization. I also worked in localization and technical writing (manuals and handouts for Moodle use) and migration of version 1.4 to 2.1 in 2012/13.</li></ul><ul id="b34e1d6a-a5b2-4be5-8a25-1fb31508e7a9" class="bulleted-list"><li style="list-style-type:disc"><strong>Skills:</strong> JavaScript · NLTK · SCIKIT-LEARN · applied linguistics · machine learning</li></ul><h2 id="f7b4a335-28e1-4b29-9127-9038bc264e5e" class="">PHP developer (Internship)</h2><p id="3b8b54fa-90a0-4ffc-90f4-c9810b28784a" class="block-color-gray">NAPEAD/UFRGS - <em>Porto Alegre - From April 2011 until March 2012</em></p><ul id="299a77f9-b636-497d-adca-2979a6e8ac0f" class="bulleted-list"><li style="list-style-type:disc"><strong>Project</strong>: Learning objects.</li></ul><ul id="03a93e99-a43b-4fde-974d-693f6dc9a8f1" class="bulleted-list"><li style="list-style-type:disc"><strong>Main responsibilities</strong>: I worked as developer for the Pedagogical Core of TIC development at UFRGS. My mains responsibilities are to implement the OAs (Objetos de Aprendizagem in Portuguese) using PHP, Flash, HTML5 and CSS. No framework was used in this projects.</li></ul><ul id="61d2f8be-bc91-454a-a042-8d86ae02fb51" class="bulleted-list"><li style="list-style-type:disc"><strong>Skills:</strong> JavaScript · PHP · MySQL · CSS · HTML5</li></ul><h2 id="ded4e41d-7aa2-4207-8d06-ad1f32a4a923" class="">PHP developer (Internship)</h2><p id="86c87322-6d48-4b9f-b8d0-b4e05a6cfce0" class="block-color-gray">CPD/UFRGS - <em>Porto Alegre - From June 2010 until July 2010</em></p><ul id="0e30f64e-55b0-474d-a604-710fbd2f13d1" class="bulleted-list"><li style="list-style-type:disc"><strong>Project</strong>: Systems migration.</li></ul><ul id="b036b142-8389-4ad7-8d80-dfb710f09f31" class="bulleted-list"><li style="list-style-type:disc"><strong>Main responsibilities</strong>: I worked as developer for the CPD at UFRGS in the migration team. The mains focus was to migrate the educational systems from Delphi 5 and 7 to PHP. The secondary focus was to maintain and support the production systems while they were migrating.</li></ul><ul id="b4b657c2-658a-40d6-bb02-409a9d57eba5" class="bulleted-list"><li style="list-style-type:disc"><strong>Skills:</strong> Delphi · PHP · MySQL</li></ul><hr id="6f06a9b8-6e55-4511-9ae6-f08eec9b66a0"/><h1 id="59431d46-029b-4e82-bade-9a7fac1f0fa7" class="">🛠 Skills</h1><h2 id="794babd6-8aaa-40f0-9116-989026f39165" class="">💻 Technology</h2><h3 id="910f831b-5835-45df-ad74-ee57b1b8c63e" class="">Trados Studio ⭐️⭐️⭐️⭐️</h3><p id="ae2ef72d-59cf-47f7-9550-935664267deb" class="">I worked for more than 10 years with several version of Trados Studio for translations teams around the world.</p><h3 id="e30ad337-3943-4e70-8536-2fe7cf9673aa" class="">Python ⭐️</h3><p id="d3756966-8c50-4133-81b2-1eaf4f589d75" class="">Newcome developer in Data Science and Natural Language Processing. Experienced developer when dealing with web development (Plone and Django). Intermediate level of knowledge of scikit-learn, NLTK, Pandas, NumPy and TensorFlow for data science and natural language processing.</p><h3 id="5b08302e-bef0-4b14-bdaf-59279befdd2d" class="">WordPress ⭐️⭐️⭐️⭐️</h3><p id="e87f9334-2d50-412b-943b-59a4d33238ad" class="">Noob developer, trying to reach some development level with nodeJS, VueJS etc.</p><h3 id="018c381f-8fee-40b8-87c3-1bdbafe6dc6c" class="">CSS/HTML/MySQL ⭐️⭐️⭐️⭐️</h3><p id="dff0169a-5cbd-468e-a569-a2d8739e8ecf" class="">I have good knowledge of the new and old web technologies, such as Bootstrap, Tailwind, CSS3, HTML5 and MySQL (for a daily basis use as developer).</p><p id="2ec90a1b-3efe-427c-8fe9-f9bf11151b11" class="">
+</p><hr id="a7159c0a-f68a-4984-ae6e-468d577142f3"/><h2 id="2467f0c2-4f40-4ef8-86e1-7cf97e69c94d" class="">🗣 Languages</h2><ul id="8a8ba23d-8485-436a-92e4-c249e95476e3" class="bulleted-list"><li style="list-style-type:disc">English: fluent/bilingual</li></ul><ul id="ceb4e0b4-f1eb-416f-91fb-08d3260f74e6" class="bulleted-list"><li style="list-style-type:disc">Spanish: reading/comprehension</li></ul><hr id="1cb4cb0a-317d-4746-b36c-9a109c8ad5af"/><h1 id="00825fe1-e227-408f-9a4c-0569afd672b1" class="">📜 Articles, presentations and abstracts</h1><ul id="9c7352cb-2cbf-4637-bdc5-f3deb003aed9" class="bulleted-list"><li style="list-style-type:disc"><strong>Aplicação do MWE Toolkit na pesquisa de Combinatórias Léxicas Especializadas da linguagem legislativa do meio ambiente</strong></li></ul><figure id="496dcfc0-251d-4b3b-9114-ff7cec433800"><a href="http://cameleon.imag.fr/xwiki/bin/download/Main/CAMELEON%202013/Cameleon-2013.pdf" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title"></div></div><div class="bookmark-href">http://cameleon.imag.fr/xwiki/bin/download/Main/CAMELEON%202013/Cameleon-2013.pdf</div></div></a></figure><ul id="c45b1722-abda-4020-b7ea-ee6cb66185af" class="bulleted-list"><li style="list-style-type:disc"><strong>Combinatórias Léxicas Especializadas: etapas prévias para sua extração utilizando recursos do Processamento da Linguagem Natural</strong></li></ul><figure id="39a0823b-e817-4103-9cca-baf268e62400"><a href="https://lume.ufrgs.br/handle/10183/63233" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Combinatórias Léxicas Especializadas: etapas prévias para sua extração utilizando recursos do Processamento da Linguagem Natural</div></div><div class="bookmark-href"><img src="https://lume.ufrgs.br/themes/Mirage2Novo/images/favicon.ico" class="icon bookmark-icon"/>https://lume.ufrgs.br/handle/10183/63233</div></div><img src="https://lume.ufrgs.br/themes/Mirage2Novo/images/google_scholar.png" class="bookmark-image"/></a></figure><ul id="c9c5141c-e79a-4ee5-a785-818a78fad9c5" class="bulleted-list"><li style="list-style-type:disc"><strong>Combinatórias Léxicas Especializadas: extração com o uso do MWE Toolkit</strong></li></ul><figure id="d1be8d48-964b-4fb7-ad4c-227f8dcea1a0"><a href="https://lume.ufrgs.br/handle/10183/113077" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Combinatórias Léxicas Especializadas: extração com o uso do MWE Toolkit</div></div><div class="bookmark-href"><img src="https://lume.ufrgs.br/themes/Mirage2Novo/images/favicon.ico" class="icon bookmark-icon"/>https://lume.ufrgs.br/handle/10183/113077</div></div><img src="https://lume.ufrgs.br/themes/Mirage2Novo/images/google_scholar.png" class="bookmark-image"/></a></figure><hr id="cd258875-d4bf-417a-988c-bdae169e16f8"/><h1 id="e85869bb-33cb-4379-aa77-744d97b5f573" class="">📚 Education</h1><h2 id="9078b6dc-4b97-4c71-ab5f-d6e207112099" class=""><strong>Bachelor&#x27;s Degree in Translation (Letras - English)</strong></h2><p id="b12f7c02-301d-4e9b-a62f-cef883eff76c" class="block-color-gray">2011 ~ 2016</p><p id="0052f541-3540-4832-a500-38bbc151554b" class=""><strong>Universidade Federal do Rio Grande do Sul</strong></p><h2 id="29fe15e6-6923-46c6-a6fe-221af5883a8a" class="">Educational <strong>Degree in Mathematics</strong></h2><p id="35e33b59-fcdf-4216-a77b-ccf15c07281c" class="block-color-gray">Ongoing since 2021</p><p id="c14a7174-99de-4bf0-a107-780350d6bdf4" class=""><strong>Universidade Estácio de Sá</strong></p><h2 id="dd78edad-0e49-43c0-930f-dd5473057f32" class="">Specialization (lato sensu) in Full Stack Development</h2><p id="9e2750f2-b9e2-4594-a2a5-96554822d4c0" class="block-color-gray">Ongoing since 2022 (graduation predict to November/22)</p><p id="3f665349-b587-4969-924d-4e33438ffad9" class=""><strong>Anhanguera Educacional</strong></p><hr id="891caed8-dfba-4f6a-9760-be436124694a"/><h1 id="820e3fc7-25a5-437e-8d53-74495e2c7b62" class="">📜 Published websites</h1><figure id="7af0f2d5-72cf-44f1-80f6-1ed550d0722d"><a href="https://www.ufrgs.br/napead/projetos/tutodatamine/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">APRESENTAÇÃO</div><div class="bookmark-description">Este projeto é parte integrante de uma ação de ensino com o uso de ferramentas computacionais que já vem sendo desenvolvida pelo autor junto ao Departamento de Engenharia de Minas da Universidade Federal do Rio Grande do Sul na modalidade presencial.</div></div><div class="bookmark-href"><img src="https://www.ufrgs.br/napead/projetos/tutodatamine/favicon-napead.ico" class="icon bookmark-icon"/>https://www.ufrgs.br/napead/projetos/tutodatamine/</div></div></a></figure><figure id="71c34a8b-4177-4d46-bd48-03492a21cfa3"><a href="https://www.ufrgs.br/napead/projetos/alvenaria-estrutural/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Alvenaria Estrutural</div></div><div class="bookmark-href"><img src="https://www.ufrgs.br/napead/projetos/alvenaria-estrutural/favicon-napead.ico" class="icon bookmark-icon"/>https://www.ufrgs.br/napead/projetos/alvenaria-estrutural/</div></div></a></figure><hr id="c63652bc-d079-43f3-b92b-d7566af1e2a4"/><h1 id="958f9407-42b8-4677-8cae-ffdd0cd8cc50" class="">📜 Outdated websites</h1><p id="977dc8b5-1297-4e6f-8317-65f6db937d5e" class="">From 2013 to 2014 I was responsible for the implementation of the terminological base of Termisul&#x27;s LegisAmb project using PHP and MySQL in Linux environment. The base was built upon the research of translation of legal terminologies from the LegisAmb environment at UFRGS, being necessary to make a lot of cross references in the database and a CRUD system in order that the researchers could insert, modify, remove and authorize the insertions within this database.</p><p id="b26a27dd-5aad-45e7-b7aa-6de716fcf502" class=""><strong>Nowadays this web system is outdated and no longer in use at TERMISUL.</strong></p><hr id="fe9664c0-d49b-4b6a-b253-65abeaee179b"/><h1 id="ca26b3ac-4401-4423-8e3e-036cd62f246b" class="">📜Other informations and certifications</h1><figure id="87fb788d-b5ac-42f7-af1e-ecfd5fe46de8"><a href="https://www.linkedin.com/learning/certificates/844c8146917cf6cabb6480b4571e299b4bbb9c6309134a13bef93c1da4e9c118?trk=share_certificate" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Certificate of Completion</div><div class="bookmark-description">By: Leslie O&#x27;Flahavan Course A quickstart guide is a short, getting-started document that usually accompanies a product or software. In this course, writing instructor Leslie O&#x27;Flahavan explains the components, best writing practices, and overall strategy for creating a quickstart guide that helps readers easily find answers to their questions.</div></div><div class="bookmark-href"><img src="https://static-exp1.licdn.com/sc/h/444zstxv7s91nepfm5et6ofge" class="icon bookmark-icon"/>https://www.linkedin.com/learning/certificates/844c8146917cf6cabb6480b4571e299b4bbb9c6309134a13bef93c1da4e9c118?trk=share_certificate</div></div><img src="https://media-exp2.licdn.com/dms/image/C4D1FAQHDrjOp97gRkg/feedshare-document-cover-images_1280/0/1656018372896?e=1656626400&amp;v=beta&amp;t=0qr_vPzbvZ4uom70tS-R0BBwnLhcD9m9W3u3UOH9KWA" class="bookmark-image"/></a></figure><figure id="c1b8148d-4e8e-4e9d-87d2-882b98651950"><a href="https://www.linkedin.com/learning/certificates/5d6c22711152df7d26c6e29d33ff9173d17d9fd09b032312075350f1ac4b5197?trk=share_certificate" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Certificate of Completion</div><div class="bookmark-description">By: Cory Lebson Course User experience is a rewarding career. Successful UX professionals can improve technology so that it is more efficient, effective, and satisfying for those that use it. But where does a career in UX start?</div></div><div class="bookmark-href"><img src="https://static-exp1.licdn.com/sc/h/444zstxv7s91nepfm5et6ofge" class="icon bookmark-icon"/>https://www.linkedin.com/learning/certificates/5d6c22711152df7d26c6e29d33ff9173d17d9fd09b032312075350f1ac4b5197?trk=share_certificate</div></div><img src="https://media-exp1.licdn.com/dms/image/C4D1FAQFYTwymL16QYg/feedshare-document-cover-images_1280/0/1656015073364?e=1656626400&amp;v=beta&amp;t=QkBGcBOOM29HR1XqHe6nGeSvhFS9dbkRjVp0HR7RCBE" class="bookmark-image"/></a></figure><h1 id="cfe9880d-f707-4cb3-b4fc-977b0fad7ea9" class="">📜 Translations (EN → PT)</h1><figure id="f4f633e6-6dea-4242-8b4e-44e1268e72b5"><a href="https://medium.com/pensamentos-rasos/primeira-vista-3b60e874facb" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Primeira vista</div><div class="bookmark-description">Edgar Allan Poe é conhecido pelos seus contos de horror, normalmente evocando a loucura como tema central da sua narrativa com gosto peculiar pelas reviravoltas ao final dos seus textos.</div></div><div class="bookmark-href">https://medium.com/pensamentos-rasos/primeira-vista-3b60e874facb</div></div><img src="https://miro.medium.com/max/1200/1*eMbJGFfBLT5RTzXI8YWgVQ.jpeg" class="bookmark-image"/></a></figure><figure id="506fc4e8-8ca4-4832-83b0-70a4bd4291e5"><a href="https://medium.com/pensamentos-rasos/trilobitas-1d8852b53726" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">TRILOBITAS</div><div class="bookmark-description">Sempre fui fascinado pelo &quot;terror espacial&quot;, desde a época do &quot;O Enigma do Horizonte&quot; e depois passando pelo terror lovecraftiano. Recentemente topei com esse conto no r/NoSleep e, depois de ler de madrugada, resolvi que era hora de traduzi-lo (e até mexer em algumas coisas, criando uma versão do conto em português).</div></div><div class="bookmark-href">https://medium.com/pensamentos-rasos/trilobitas-1d8852b53726</div></div><img src="https://miro.medium.com/max/1200/1*cSXgiQ-EAXdRKNkfHCJr0w.jpeg" class="bookmark-image"/></a></figure><figure id="a6ccfc08-99e7-44c6-b2af-3b479273ca30"><a href="https://medium.com/pensamentos-rasos/preenchendo-o-vazio-com-redes-sociais-a9155c78a691" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Preenchendo o vazio (com redes sociais)</div><div class="bookmark-description">É difícil escrever criticamente sobre redes sociais sem soar como um velho gritando com uma nuvem. Afinal, todos nós concordamos com os mecanismos elegantes da indústria, transformando deliberadamente em mercadoria nossos pensamentos, relacionamentos e memórias para um punhado de executivos do Vale do Silício.</div></div><div class="bookmark-href">https://medium.com/pensamentos-rasos/preenchendo-o-vazio-com-redes-sociais-a9155c78a691</div></div></a></figure><figure id="ad014273-1a37-474d-8365-224a2f6f2e45"><a href="https://medium.com/pensamentos-rasos/tradu%C3%A7ocomo-apagar-o-inc%C3%AAndio-da-democracia-66f404f224d" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">TRADUÇOComo apagar o incêndio da democracia</div><div class="bookmark-description">Este artigo foi publicado online em 8 de março de 2021 e atualizado às 8:41 ET do dia 11 de março de 2021. Por Anne Applebaum e Peter Pomerantsev Ler o diário de Gustave de Beaumont, o companheiro de viagem de Alexis de Tocqueville, é entender o quão primitivo o deserto americano parecia para os franceses visitantes.</div></div><div class="bookmark-href">https://medium.com/pensamentos-rasos/tradu%C3%A7ocomo-apagar-o-inc%C3%AAndio-da-democracia-66f404f224d</div></div><img src="https://miro.medium.com/max/750/0*DNVYzCIvrmaisaiP.png" class="bookmark-image"/></a></figure><figure id="1ec8e441-4a70-4eff-9ed6-0560e2371c82"><a href="https://medium.com/pensamentos-rasos/ser-gamer-%C3%A9-ser-babaca-71d1afba8941" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Ser gamer é ser babaca.</div><div class="bookmark-description">Se você não é, seus amigos são. Semana passada a maioria das pessoas ligadas a jogos eletrônicos, aqui e no exterior, se tocou com as histórias que pulularam pelas redes sociais sobre os assédios e abusos cometidos dentro da Blizzard.</div></div><div class="bookmark-href">https://medium.com/pensamentos-rasos/ser-gamer-%C3%A9-ser-babaca-71d1afba8941</div></div><img src="https://miro.medium.com/max/1200/0*jqUObZXvwz_kQeB9.jpeg" class="bookmark-image"/></a></figure></div></article></body></html>
